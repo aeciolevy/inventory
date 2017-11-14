@@ -18,17 +18,9 @@ const SidebarUI = (props) => {
           icon='labeled'
           vertical
         >
-          <Menu.Item name='home'>
-            <Icon name='home' />
-            Home
-          </Menu.Item>
-          <Menu.Item name='gamepad'>
-            <Icon name='gamepad' />
-            Games
-          </Menu.Item>
-          <Menu.Item name='camera'>
-            <Icon name='camera' />
-            Channels
+          <Menu.Item href="/listings">
+            <Icon name="first aid" />
+            Listing
           </Menu.Item>
         </Sidebar>
         <Sidebar.Pusher>
