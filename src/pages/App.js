@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import MenuUI from '../components/menu-ui';
 import SidebarUI from '../components/sidebar-ui';
+import Dashboard from '../components/dashboard';
 
 class App extends Component {
   state = {};
@@ -20,7 +21,7 @@ class App extends Component {
       <div>
         <MenuUI handleItemClick={this.handleItemClick} activeItem={activeItem}/>
         <SidebarUI visible={visible}>
-          <h1> Dashboard </h1>
+          <Dashboard />
         </SidebarUI>
       </div>
     );

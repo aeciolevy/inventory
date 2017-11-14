@@ -2,34 +2,35 @@
 /* eslint react/prefer-stateless-function: 0 */
 import React from 'react';
 import { Sidebar, Segment, Menu, Icon } from 'semantic-ui-react';
+import { sideStyle } from './styles';
 import 'semantic-ui-css/semantic.min.css';
 
 const SidebarUI = (props) => {
   const { visible, children } = props;
   return (
-    <div>
-      <Sidebar.Pushable as={Segment}>
-        <Sidebar
-          as={Menu}
-          animation='slide along'
-          width='thin'
-          direction='left'
-          visible={visible}
-          icon='labeled'
-          vertical
-        >
-          <Menu.Item href="/listings">
-            <Icon name="first aid" />
-            Listing
-          </Menu.Item>
-        </Sidebar>
-        <Sidebar.Pusher>
-          <Segment basic>
-            { children }
-          </Segment>
-        </Sidebar.Pusher>
-      </Sidebar.Pushable>
-    </div>
+    <Sidebar.Pushable as={Segment} style={sideStyle} >
+      <Sidebar
+        as={Menu}
+        animation='overlay'
+        width='very thin'
+        direction='left'
+        visible={visible}
+        icon='labeled'
+        vertical
+        size="mini"
+        style={{ border: 'none'}}
+      >
+        <Menu.Item href="/listings" style={{ minWidth: 'unset' }} >
+          <Icon name="first aid" />
+          Listing
+        </Menu.Item>
+      </Sidebar>
+      <Sidebar.Pusher style={{ background: 'none'}} >
+        <Segment basic >
+          { children }
+        </Segment>
+      </Sidebar.Pusher>
+    </Sidebar.Pushable>
   );
 };
 
