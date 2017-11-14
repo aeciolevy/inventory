@@ -1,20 +1,26 @@
 /* eslint react/jsx-filename-extension: 0, react/no-multi-comp: 0, react/prop-types: 0 */
 /* eslint react/prefer-stateless-function: 0 */
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import MenuUI from './components/menu-ui';
+import SidebarUI from './components/sidebar-ui';
 
 class App extends Component {
+  state = {};
+  handleItemClick = (e, { name }) => {
+    if (name === this.state.activeItem) {
+      name = '';
+    }
+    this.setState({ activeItem: name, visible: !this.state.visible })
+  }
+
   render () {
+    const { activeItem, visible } = this.state
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <MenuUI handleItemClick={this.handleItemClick} activeItem={activeItem}/>
+        <SidebarUI visible={visible}>
+          <h1> test </h1>
+        </SidebarUI>
       </div>
     );
   }
