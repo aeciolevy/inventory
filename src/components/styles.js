@@ -6,7 +6,7 @@ export const sideStyle = {
   backgroundColor: sideColor,
   border: 'none',
   boxShadow: 'none',
-  minHeight: '100vh',
+  minHeight: '100vh'
 };
 
 export const H1Section = styled.h1`
