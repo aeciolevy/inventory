@@ -3,7 +3,6 @@ import React from 'react';
 import { Icon, Grid, Statistic } from 'semantic-ui-react';
 
 const StatisticUI = (props) => {
-
   return (
     <Grid doubling columns={4}>
       <Grid.Row stretched>
