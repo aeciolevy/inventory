@@ -9,6 +9,7 @@ import App from './pages/App';
 import Listing from './pages/Listing';
 import reducers from './reducers';
 import registerServiceWorker from './registerServiceWorker';
+import 'semantic-ui-css/semantic.min.css';
 
 const createStoreWithMiddleware = applyMiddleware(thunkMiddleware)(createStore);
 
