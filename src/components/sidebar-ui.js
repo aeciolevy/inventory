@@ -20,7 +20,7 @@ const SidebarUI = (props) => {
         style={{ border: 'none'}}
       >
         <Menu.Item href="/listings" style={{ minWidth: 'unset' }} >
-          <Icon name="first aid" />
+          <Icon name="address book" />
           Listing
         </Menu.Item>
       </Sidebar>

@@ -14,3 +14,8 @@ export const H1Section = styled.h1`
   font-weight: 500;
   margin-bottom: 20px;
 `;
+
+export const gifStyle = {
+  maxHeight: '60vh',
+
+}
