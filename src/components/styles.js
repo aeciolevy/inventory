@@ -17,5 +17,14 @@ export const H1Section = styled.h1`
 
 export const gifStyle = {
   maxHeight: '60vh',
+}
 
+export const butFace = {
+  width: '240px',
+  height: '50px',
+  marginTop: '30px'
+};
+
+export const loginStyle = {
+  transform: 'translateY(25vh)'
 }
