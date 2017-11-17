@@ -1,6 +1,10 @@
 ## This is stock management implementation with React and Redux
 
 - This project was built in with Create React App, you must install it globally
+- To run, just clone the repository and
+```
+npm start
+```
 
 ##Stacks and Libraries Used
 
