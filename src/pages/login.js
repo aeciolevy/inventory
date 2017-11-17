@@ -8,7 +8,7 @@ import GoogleButton from 'react-google-button';
 import { Button, Container, Icon, Grid, Segment } from 'semantic-ui-react';
 import { butFace, loginStyle } from '../components/styles'
 
-export const LoginPage = ({ firebase, auth }) => {
+const LoginPage = ({ firebase, auth }) => {
   return (
     auth && auth.uid ?
     <Redirect to={{

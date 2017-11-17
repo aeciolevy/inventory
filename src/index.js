@@ -9,12 +9,11 @@ import firebase from 'firebase';
 
 import App from './pages/App';
 import Listing from './pages/Listing';
+import LoginPage from './pages/login';
 import reducers from './reducers';
 import registerServiceWorker from './registerServiceWorker';
 import 'semantic-ui-css/semantic.min.css';
-import LoginPage from './pages/login';
 import PrivateRoute from './components/private-route';
-import LoaderUI from './components/loader';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIRE_KEY,
@@ -42,7 +41,6 @@ ReactDOM.render(
         <PrivateRoute exact path="/" component={App} />
         <PrivateRoute exact path="/listings" component={Listing} />
         <Route exact path="/login" component={LoginPage} />
-        <Route exact path="/test" component={LoaderUI} />
       </Switch>
     </BrowserRouter>
   </Provider>, document.getElementById('root'));
